@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Full Circle — Text Version</title>
+<style>
+  :root{ --fs: 1.3rem; --ink:#16140f; --paper:#fbfaf6; --rule:#d8d3c4; --accent:#5a4a2f; --link:#2a4d8f; }
+  *{ box-sizing:border-box; }
+  html{ background:var(--paper); }
+  body{
+    margin:0; color:var(--ink); background:var(--paper);
+    font-family:Georgia,'Iowan Old Style','Times New Roman',serif;
+    font-size:var(--fs); line-height:1.75; -webkit-text-size-adjust:100%;
+  }
+  .skip{ position:absolute; left:-9999px; top:auto; background:#16140f; color:#fff; padding:10px 16px; border-radius:0 0 6px 0; z-index:10; }
+  .skip:focus{ left:0; top:0; }
+
+  header.bar{
+    position:sticky; top:0; z-index:5; background:var(--paper);
+    border-bottom:1px solid var(--rule); padding:12px clamp(16px,4vw,32px);
+    display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; justify-content:space-between;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  .bar .group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .bar .brand{ font-weight:700; font-size:1rem; letter-spacing:.01em; }
+  button, .btn{
+    font:inherit; font-size:.95rem; padding:8px 14px; min-height:44px;
+    background:#fff; color:var(--ink); border:2px solid var(--ink); border-radius:8px;
+    cursor:pointer; line-height:1.1;
+  }
+  button:hover, .btn:hover{ background:#16140f; color:#fff; }
+  button[aria-pressed="true"]{ background:#16140f; color:#fff; }
+  button:focus-visible, a:focus-visible, .btn:focus-visible{ outline:3px solid var(--link); outline-offset:2px; }
+  .sizer{ display:inline-flex; align-items:center; gap:6px; }
+  .sizer span{ font-size:.85rem; opacity:.75; }
+  a.return{ color:var(--link); font-size:.95rem; text-decoration:underline; min-height:44px; display:inline-flex; align-items:center; }
+
+  main{ max-width:38rem; margin:0 auto; padding:clamp(24px,5vw,56px) clamp(20px,5vw,28px) 80px; }
+  .eyebrow{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--accent); margin:0 0 .4em; }
+  h1{ font-size:2.5em; line-height:1.12; margin:.1em 0 .15em; font-weight:700; }
+  .byline{ font-style:italic; color:#4a463c; margin:0 0 1.6em; font-size:1.05em; }
+  h2{ font-size:1.5em; line-height:1.2; margin:1.9em 0 .35em; }
+  p{ margin:0 0 1em; }
+  em{ font-style:italic; }
+  .sources{ margin-top:2.4em; padding-top:1.2em; border-top:1px solid var(--rule); font-size:.9em; color:#4a463c; }
+  .sources h2{ font-size:1.1em; margin-top:0; }
+  .land{ font-size:.9em; color:#4a463c; font-style:italic; margin-top:1.4em; }
+  [hidden]{ display:none !important; }
+
+  @media print{
+    header.bar{ display:none; }
+    body{ font-size:12pt; color:#000; background:#fff; }
+    main{ max-width:none; padding:0; }
+    a.noteref{ color:#000; }
+  }
+  @media (prefers-reduced-motion: no-preference){
+    html{ scroll-behavior:smooth; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the story</a>
+
+<header class="bar">
+  <div class="group">
+    <span class="brand" id="brand">The Full Circle</span>
+  </div>
+  <div class="group">
+    <div class="group" role="group" aria-label="Language / Langue">
+      <button id="btn-en" aria-pressed="true" onclick="setLang('en')">English</button>
+      <button id="btn-fr" aria-pressed="false" onclick="setLang('fr')">Français</button>
+    </div>
+    <span class="sizer" role="group" aria-label="Text size">
+      <span id="sizeLabel">Text size</span>
+      <button id="dec" aria-label="Decrease text size" onclick="bumpSize(-1)">A&minus;</button>
+      <button id="inc" aria-label="Increase text size" onclick="bumpSize(1)">A+</button>
+    </span>
+    <button id="printBtn" onclick="window.print()">Print</button>
+    <button id="saveBtn" onclick="saveText()">Save Text Version</button>
+    <a class="return" id="returnLink" href="full-circle-hypercard.html">Return to the interactive stack</a>
+  </div>
+</header>
+
+<main id="content" tabindex="-1">
+
+  <!-- ENGLISH -->
+  <article id="story-en" lang="en">
+    <p class="eyebrow">A story about making, teaching, and tending</p>
+    <h1>The Full Circle</h1>
+    <p class="byline">Christian Michalik &middot; 1989&ndash;2026</p>
+
+    <h2>The floppy you could hold</h2>
+    <p>In 1989, a young teacher slid a disk into a Macintosh and discovered something quietly radical: he could build. HyperCard let you type a plain sentence &mdash; <em>show button</em> &mdash; and the machine obeyed. No gatekeeping, no wall of code. Apple had handed ordinary people, teachers and students among them, the tools to become makers rather than consumers. The tool fit in your hand. You could open it, read it, break it, and maybe fix it.</p>
+
+    <h2>The media lab</h2>
+    <p>Through the 1990s the canvas grew. On the iMac, projects came alive in colour and sound; HyperStudio kept HyperCard&rsquo;s exact grammar of cards linked by invisible buttons, and let a generation of students compose with recorded voices, scanned drawings, and hidden pathways through a story. Learning looked like play. Play was the project.</p>
+
+    <h2>The rented cloud</h2>
+    <p>By 2026 the spell had changed shape. Now you describe what you want in plain language and working software simply appears. It is a kind of magic, and it carries a cost. The thing you make is created in a space you rent and cannot see. When the vendor changes the terms or walks away, the thing you made can simply stop, and you have no appeal. This is the quiet danger of technofeudalism: a handful of tech lords own the ground beneath all our making, free to raise the rent, rewrite the rules, harvest what we do there, or lock us out at will. The floppy you once held has become a lease. And not everyone was ever handed a key; access has always been a privilege, then and now.</p>
+
+    <h2>Tending the garden</h2>
+    <p>Across all of it runs a single conviction: we do not make students grow &mdash; we tend the soil. We are born creators, carrying <em>the wonder we are born with</em>, and too often school and work train that instinct out of us. To teach is to nourish the conditions, to tend without forcing, and to trust that each person already carries an inherent gift. And no garden worth keeping is a monoculture.</p>
+
+    <h2>The three sisters</h2>
+    <p>A classroom is not a field of one crop sown in tidy rows but a living polyculture. Corn raises the scaffold, beans feed the soil, squash shelters the ground, and the roles are never fixed. In a single morning a learner may shoot up to raise a new scaffold of insight while the teacher quietly feeds the soil beneath. Here, difference is the nutrient, not the deficit.</p>
+
+    <h2>We are all treaty people</h2>
+    <p>This work is written on Treaty 1 territory, where treaty is not a footnote but a living covenant &mdash; lateral, reciprocal, ongoing. To lead through it is to turn the soil of truth, confronting racism, dismantling colonialism, and facing the legacy of residential schools; to widen the circle so every student meets the conditions they need, and to measure success by the health of our relationships, remembering that the community serves the child, not the mandate.</p>
+
+    <h2>Thirty-seven years of tools</h2>
+    <p>For thirty-seven years, as teachers and leaders, the workbench kept changing under our hands. Each new tool stripped away a little more of the mechanical tedium, like a digital steam engine built to rescue us from the manual drudgery of data and layout, and asked less of us as operators and a little more of us as thinkers. Each one lowered the floor. We structured information in FileMaker so a school could finally see itself, laying the data foundations that eventually made Power BI possible; we turned that data into a story a team could act on. We pressed sound and pictures onto Macromedia and multimedia CD-ROMs when &ldquo;multimedia&rdquo; was still a promise, learning the interactive design that led straight into websites, trading the physical limits of plastic discs for the open architecture of the internet, and reaching far past the walls of the building.</p>
+    <p>This year the floor dropped to language itself: I describe what I want, and the engine appears, including the stack this companion belongs to. And the game-changing question arrives with a vengeance: as the engines take over, are we the horses being outpaced, or are we the ones directing the steam? The feeling is equal parts exhilarating, dizzying, and frightening. If this is the current pace, what will an ordinary day feel like for a teacher or a learner one year from now? Five years from now? I only wish I weren&rsquo;t leaving just as it begins.</p>
+
+    <h2>The messy human struggle</h2>
+    <p>The steam engine never replaced the horse; it imitated an abstraction of what a horse could do, without ever modelling its nature. Artificial intelligence does the same with our minds, finding regularities in our strange, human thought until it can mimic the chaotic way we talk. But the real intelligence lives in the friction it cannot model: a student wrestling language into an idea that is new to them, a colleague disagreeing in good faith, the refusal to drift into the autopilot of our lives. When everyone leans on the same few models, we risk losing the pluralism that makes democracy work and lets knowledge generate. So to anyone still at the educational workbench: resist the autopilot, and protect the friction.</p>
+    <p style="font-style:italic;text-align:center;">&ldquo;Long live the struggle.<br>Long live the messy human struggle.&rdquo;</p>
+    <p class="land">Passages quoted and adapted from the CBC Radio <em>IDEAS</em> episode &ldquo;The 33,000 Horsepower Gamechanger | The Greatest Numbers of All Time&rdquo; (June 25, 2026).</p>
+
+    <h2>The bequest</h2>
+    <p>The garden is yours now, for whoever finds this later. Build things that lower the floor. Make learning feel like play, at every age. And keep tending the garden.</p>
+
+    <div class="sources">
+      <h2>A note on sources</h2>
+      <p><em>Mam&agrave;htawisiwin</em> &mdash; &ldquo;the wonder we are born with&rdquo; &mdash; is a Cree teaching, carried here from Manitoba&rsquo;s Indigenous education framework of the same name. The Three Sisters and the Honourable Harvest come from Robin Wall Kimmerer (Citizen Potawatomi Nation). These teachings are not mine to own; I name their sources to stay accountable to the framework&rsquo;s vision and the Knowledge Carriers who protect it.</p>
+      <p class="land">Written on Treaty 1 territory &mdash; the lands of the Anishinaabe, Ininew, Anisininew, Dakota, and Dene Peoples, and the homeland of the Red River M&eacute;tis.</p>
+    </div>
+  </article>
+
+  <!-- FRANÇAIS -->
+  <article id="story-fr" lang="fr" hidden>
+    <p class="eyebrow">Une histoire de cr&eacute;ation, d&rsquo;enseignement et d&rsquo;entretien</p>
+    <h1>La Boucle Boucl&eacute;e</h1>
+    <p class="byline">Christian Michalik &middot; 1989&ndash;2026</p>
+
+    <h2>La disquette que l&rsquo;on pouvait tenir</h2>
+    <p>En 1989, un jeune enseignant glisse une disquette dans un Macintosh et d&eacute;couvre une chose discr&egrave;tement radicale&nbsp;: il peut b&acirc;tir. HyperCard permettait de taper une simple phrase &mdash; <em>show button</em> &mdash; et la machine ob&eacute;issait. Pas de gardiens, pas de mur de code. Apple avait remis &agrave; des gens ordinaires, enseignants et &eacute;l&egrave;ves compris, les outils pour devenir des cr&eacute;ateurs plut&ocirc;t que des consommateurs. L&rsquo;outil tenait dans la main. On pouvait l&rsquo;ouvrir, le lire, le casser, et peut-&ecirc;tre le r&eacute;parer.</p>
+
+    <h2>Le labo m&eacute;dia</h2>
+    <p>Au fil des ann&eacute;es 1990, la toile s&rsquo;est agrandie. Sur l&rsquo;iMac, les projets prenaient vie en couleur et en son&nbsp;; HyperStudio gardait la grammaire exacte de HyperCard, faite de cartes reli&eacute;es par des boutons invisibles, et laissait toute une g&eacute;n&eacute;ration composer avec des voix enregistr&eacute;es, des dessins num&eacute;ris&eacute;s et des chemins cach&eacute;s &agrave; travers une histoire. Apprendre ressemblait &agrave; jouer. Le jeu &eacute;tait le projet.</p>
+
+    <h2>Le nuage que l&rsquo;on loue</h2>
+    <p>En 2026, le sortil&egrave;ge a chang&eacute; de forme. On d&eacute;crit ce que l&rsquo;on veut en langage clair, et un logiciel fonctionnel appara&icirc;t. C&rsquo;est une sorte de magie, et elle a un co&ucirc;t. Ce que l&rsquo;on fabrique est cr&eacute;&eacute; dans un espace que l&rsquo;on loue et que l&rsquo;on ne peut pas voir. Quand le fournisseur change les conditions ou s&rsquo;en va, ce que l&rsquo;on a fabriqu&eacute; peut simplement s&rsquo;arr&ecirc;ter, et l&rsquo;on est sans recours. C&rsquo;est l&agrave; le danger sourd du technof&eacute;odalisme&nbsp;: une poign&eacute;e de seigneurs technologiques poss&egrave;dent le sol sous toute notre cr&eacute;ation, libres d&rsquo;augmenter le loyer, de r&eacute;&eacute;crire les r&egrave;gles, de moissonner ce que l&rsquo;on y fait ou de nous &eacute;vincer &agrave; leur gr&eacute;. La disquette que l&rsquo;on tenait est devenue un bail. Et tous n&rsquo;ont pas re&ccedil;u de cl&eacute;&nbsp;: l&rsquo;acc&egrave;s a toujours &eacute;t&eacute; un privil&egrave;ge, hier comme aujourd&rsquo;hui.</p>
+
+    <h2>Entretenir le jardin</h2>
+    <p>Au c&oelig;ur de tout cela, une seule conviction&nbsp;: nous ne faisons pas pousser les &eacute;l&egrave;ves &mdash; nous soignons la terre. Nous naissons cr&eacute;ateurs, porteurs de <em>l&rsquo;&eacute;merveillement avec lequel nous naissons</em>, et trop souvent l&rsquo;&eacute;cole et le travail nous en d&eacute;tournent. Enseigner, c&rsquo;est nourrir les conditions, soigner sans forcer, et faire confiance au don inn&eacute; que chacun porte d&eacute;j&agrave;. Et aucun jardin digne de ce nom n&rsquo;est une monoculture.</p>
+
+    <h2>Les trois s&oelig;urs</h2>
+    <p>Une classe n&rsquo;est pas un champ d&rsquo;une seule culture sem&eacute;e en rangs bien droits, mais une polyculture vivante. Le ma&iuml;s dresse la charpente, le haricot nourrit la terre, la courge abrite le sol, et les r&ocirc;les ne sont jamais fix&eacute;s. En une seule matin&eacute;e, un apprenant peut s&rsquo;&eacute;lancer pour dresser une nouvelle charpente d&rsquo;id&eacute;es tandis que l&rsquo;enseignant nourrit en silence la terre sous ses pieds. Ici, la diff&eacute;rence est le nutriment, pas le d&eacute;ficit.</p>
+
+    <h2>Nous sommes tous li&eacute;s par les trait&eacute;s</h2>
+    <p>Ce texte est &eacute;crit sur le territoire du Trait&eacute;&nbsp;1, o&ugrave; le trait&eacute; n&rsquo;est pas une note de bas de page mais un pacte vivant &mdash; lat&eacute;ral, r&eacute;ciproque, continu. Diriger dans cet esprit, c&rsquo;est retourner la terre de la v&eacute;rit&eacute;, affronter le racisme, d&eacute;manteler le colonialisme et faire face &agrave; l&rsquo;h&eacute;ritage des pensionnats&nbsp;; &eacute;largir le cercle pour que chaque &eacute;l&egrave;ve rencontre les conditions dont il a besoin, et mesurer la r&eacute;ussite &agrave; la sant&eacute; de nos relations, en se rappelant que la communaut&eacute; sert l&rsquo;enfant, et non le mandat.</p>
+
+    <h2>Trente-sept ans d&rsquo;outils</h2>
+    <p>Pendant trente-sept ans, comme enseignants et comme dirigeants, l&rsquo;&eacute;tabli n&rsquo;a cess&eacute; de changer sous nos mains. Chaque nouvel outil retirait un peu plus de la t&acirc;che machinale, comme une machine &agrave; vapeur num&eacute;rique con&ccedil;ue pour nous arracher &agrave; la corv&eacute;e manuelle des donn&eacute;es et de la mise en page, et exigeait moins de nous comme op&eacute;rateurs et un peu plus comme penseurs. Chacun abaissait le seuil. Nous avons structur&eacute; l&rsquo;information dans FileMaker pour qu&rsquo;une &eacute;cole puisse enfin se voir elle-m&ecirc;me, en b&acirc;tissant les fondations de donn&eacute;es qui ont fini par rendre Power BI possible&nbsp;; nous avons transform&eacute; ces donn&eacute;es en un r&eacute;cit sur lequel une &eacute;quipe pouvait agir. Nous avons grav&eacute; du son et des images sur des c&eacute;d&eacute;roms Macromedia et multim&eacute;dias quand le &laquo;&nbsp;multim&eacute;dia&nbsp;&raquo; n&rsquo;&eacute;tait encore qu&rsquo;une promesse, apprenant le design interactif qui a men&eacute; tout droit aux sites Web, troquant les limites physiques des disques de plastique contre l&rsquo;architecture ouverte d&rsquo;Internet, et d&eacute;passant de loin les murs de l&rsquo;&eacute;tablissement.</p>
+    <p>Cette ann&eacute;e, le seuil est tomb&eacute; jusqu&rsquo;au langage lui-m&ecirc;me&nbsp;: je d&eacute;cris ce que je veux, et le moteur l&rsquo;affiche, y compris la pile &agrave; laquelle ce compagnon appartient. Et la question d&eacute;cisive surgit avec force&nbsp;: &agrave; mesure que les moteurs prennent le relais, sommes-nous les chevaux que l&rsquo;on distance, ou sommes-nous ceux qui dirigent la vapeur&nbsp;? C&rsquo;est &agrave; la fois exaltant et effrayant. Si c&rsquo;est l&agrave; le rythme, &agrave; quoi ressemblera une journ&eacute;e ordinaire pour un apprenant dans un an, dans cinq ans&nbsp;? Je regrette seulement de partir au moment m&ecirc;me o&ugrave; tout commence.</p>
+
+    <h2>La chaotique lutte humaine</h2>
+    <p>La machine &agrave; vapeur n&rsquo;a jamais remplac&eacute; le cheval&nbsp;: elle imitait une abstraction de ce qu&rsquo;un cheval pouvait faire, sans jamais en mod&eacute;liser la nature. L&rsquo;intelligence artificielle fait de m&ecirc;me avec nos esprits, trouvant des r&eacute;gularit&eacute;s dans notre &eacute;trange pens&eacute;e humaine jusqu&rsquo;&agrave; imiter la fa&ccedil;on chaotique dont nous parlons. Mais la vraie intelligence vit dans la friction qu&rsquo;elle ne peut mod&eacute;liser&nbsp;: un &eacute;l&egrave;ve qui se d&eacute;bat avec la langue pour articuler une id&eacute;e nouvelle pour lui, un coll&egrave;gue qui s&rsquo;oppose de bonne foi, le refus de glisser dans l&rsquo;autopilote de nos vies. Quand tout le monde s&rsquo;appuie sur les m&ecirc;mes mod&egrave;les, nous risquons de perdre le pluralisme qui fait fonctionner la d&eacute;mocratie et g&eacute;n&eacute;rer la connaissance. &Agrave; ceux qui restent &agrave; l&rsquo;&eacute;tabli &eacute;ducatif&nbsp;: r&eacute;sistez &agrave; l&rsquo;autopilote, et prot&eacute;gez la friction.</p>
+    <p style="font-style:italic;text-align:center;">&laquo;&nbsp;Longue vie &agrave; la lutte.<br>Longue vie &agrave; la chaotique lutte humaine.&nbsp;&raquo;</p>
+    <p class="land">Passages cit&eacute;s et adapt&eacute;s de l&rsquo;&eacute;pisode <em>IDEAS</em> de CBC Radio-Canada&nbsp;: &laquo;&nbsp;The 33,000 Horsepower Gamechanger | The Greatest Numbers of All Time&nbsp;&raquo; (25 juin 2026).</p>
+
+    <h2>Le legs</h2>
+    <p>Le jardin est &agrave; vous maintenant, pour quiconque le trouvera plus tard. B&acirc;tissez des choses qui abaissent le seuil. Faites que l&rsquo;apprentissage ressemble au jeu, &agrave; tout &acirc;ge. Et continuez d&rsquo;entretenir le jardin.</p>
+
+    <div class="sources">
+      <h2>Note sur les sources</h2>
+      <p><em>Mam&agrave;htawisiwin</em> &mdash; &laquo;&nbsp;l&rsquo;&eacute;merveillement avec lequel nous naissons&nbsp;&raquo; &mdash; est un enseignement cri, repris ici du cadre d&rsquo;&eacute;ducation autochtone du Manitoba qui porte ce nom. Les Trois S&oelig;urs et la R&eacute;colte honorable viennent de Robin Wall Kimmerer (nation Potawatomi). Ces enseignements ne m&rsquo;appartiennent pas&nbsp;; j&rsquo;en nomme les sources pour demeurer redevable &agrave; la vision du cadre et aux porteurs du savoir qui le prot&egrave;gent.</p>
+      <p class="land">&Eacute;crit sur le territoire du Trait&eacute;&nbsp;1 &mdash; les terres des peuples Anishinaabe, Ininew, Anisininew, Dakota et D&eacute;n&eacute;, et la patrie de la Nation m&eacute;tisse de la rivi&egrave;re Rouge.</p>
+    </div>
+  </article>
+
+</main>
+
+<script>
+  var LANG='en';
+  var UI={
+    en:{ brand:'The Full Circle', size:'Text size', print:'Print', save:'Save Text Version', ret:'Return to the interactive stack', title:'The Full Circle — Text Version', file:'The-Full-Circle' },
+    fr:{ brand:'La Boucle Bouclée', size:'Taille du texte', print:'Imprimer', save:'Enregistrer la version texte', ret:'Retour à la pile interactive', title:'La Boucle Bouclée — Version texte', file:'La-Boucle-Bouclee' }
+  };
+  function setLang(l){
+    LANG=(l==='fr')?'fr':'en';
+    document.documentElement.lang=LANG;
+    document.getElementById('story-en').hidden=(LANG!=='en');
+    document.getElementById('story-fr').hidden=(LANG!=='fr');
+    document.getElementById('btn-en').setAttribute('aria-pressed', String(LANG==='en'));
+    document.getElementById('btn-fr').setAttribute('aria-pressed', String(LANG==='fr'));
+    var u=UI[LANG];
+    document.getElementById('brand').textContent=u.brand;
+    document.getElementById('sizeLabel').textContent=u.size;
+    document.getElementById('printBtn').textContent=u.print;
+    document.getElementById('saveBtn').textContent=u.save;
+    document.getElementById('returnLink').textContent=u.ret;
+    document.getElementById('returnLink').href = 'full-circle-hypercard.html';
+    document.title=u.title;
+    try{ localStorage.setItem('fcTextLang', LANG); }catch(e){}
+  }
+  var SIZES=[1.05,1.18,1.3,1.45,1.62,1.8], si=2;
+  function applySize(){ document.documentElement.style.setProperty('--fs', SIZES[si]+'rem');
+    try{ localStorage.setItem('fcTextSize', String(si)); }catch(e){} }
+  function bumpSize(d){ si=Math.max(0,Math.min(SIZES.length-1, si+d)); applySize(); }
+  function saveText(){
+    var art=document.getElementById(LANG==='fr'?'story-fr':'story-en');
+    var lines=[]; 
+    art.querySelectorAll('h1,h2,.eyebrow,.byline,p').forEach(function(el){
+      var t=el.textContent.replace(/\s+/g,' ').trim(); if(!t) return;
+      if(el.tagName==='H1'){ lines.push(t.toUpperCase()); lines.push(''); }
+      else if(el.tagName==='H2'){ lines.push(''); lines.push(t); lines.push('—'.repeat(Math.min(40,t.length))); }
+      else { lines.push(t); lines.push(''); }
+    });
+    var blob=new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+    a.download=UI[LANG].file+'.txt'; document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+  // init from URL ?lang= and stored prefs
+  (function(){
+    try{
+      var ss=localStorage.getItem('fcTextSize'); if(ss!==null){ si=Math.max(0,Math.min(SIZES.length-1,parseInt(ss))); }
+    }catch(e){}
+    applySize();
+    var p=new URLSearchParams(location.search).get('lang');
+    var stored=null; try{ stored=localStorage.getItem('fcTextLang'); }catch(e){}
+    setLang(p || stored || 'en');
+  })();
+</script>
+</body>
+</html>
