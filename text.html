@@ -79,7 +79,7 @@
     </span>
     <button id="printBtn" onclick="window.print()">Print</button>
     <button id="saveBtn" onclick="saveText()">Save Text Version</button>
-    <a class="return" id="returnLink" href="full-circle-hypercard.html">Return to the interactive stack</a>
+    <a class="return" id="returnLink" href="hypercard.html">Return to the interactive stack</a>
   </div>
 </header>
 
@@ -192,7 +192,7 @@
     document.getElementById('printBtn').textContent=u.print;
     document.getElementById('saveBtn').textContent=u.save;
     document.getElementById('returnLink').textContent=u.ret;
-    document.getElementById('returnLink').href = 'full-circle-hypercard.html';
+    document.getElementById('returnLink').href = 'hypercard.html';
     document.title=u.title;
     try{ localStorage.setItem('fcTextLang', LANG); }catch(e){}
   }
