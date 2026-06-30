@@ -1030,11 +1030,11 @@ body.flash{ filter:invert(1); }
   <h2 id="gate-title"></h2>
   <p id="gate-body"></p>
   <div class="gate-btns">
-    <a id="gate-text" class="btn-primary" href="full-circle-home.html" target="_blank"></a>
+    <a id="gate-text" class="btn-primary" href="text.html" target="_blank"></a>
     <button class="btn-secondary" onclick="dismissGate()"></button>
   </div>
 </div>
-<p id="bezel-note">This is an interactive, HyperCard-inspired story and a playful homage to early digital creation. Because some features may be difficult to navigate with assistive technologies, mobile devices, or keyboards, a text version is available to <a href="full-circle-home.html" target="_blank" style="color:#cacaca;">read, print, download, or keep</a>.</p>
+<p id="bezel-note">This is an interactive, HyperCard-inspired story and a playful homage to early digital creation. Because some features may be difficult to navigate with assistive technologies, mobile devices, or keyboards, a text version is available to <a href="text.html" target="_blank" style="color:#cacaca;">read, print, download, or keep</a>.</p>
 <script>
 /* MOBILE GATE */
 (function(){
@@ -1051,7 +1051,7 @@ body.flash{ filter:invert(1); }
     document.getElementById('gate-title').textContent=u.title;
     document.getElementById('gate-body').textContent=u.body;
     var ta=document.getElementById('gate-text');
-    ta.textContent=u.text; ta.href='full-circle-home.html'+(lang==='fr'?'?lang=fr':'');
+    ta.textContent=u.text; ta.href='text.html'+(lang==='fr'?'?lang=fr':'');
     document.querySelector('#mobile-gate .btn-secondary').textContent=u.try;
     document.getElementById('mobile-gate').classList.add('show');
   }
@@ -1804,8 +1804,8 @@ function setLang(l){ LANG=l; applyLangMap(l==='fr'?FR:EN); translateMenus(l); up
   renderTrash(); if(emDashPurged)stripEmDashes();
   var bn=document.getElementById('bezel-note');
   if(bn) bn.innerHTML=L
-    ? 'Il s&rsquo;agit d&rsquo;une histoire interactive inspir&eacute;e de HyperCard et d&rsquo;un hommage ludique &agrave; la cr&eacute;ation num&eacute;rique des origines. Comme certaines fonctionnalit&eacute;s peuvent &ecirc;tre difficiles &agrave; utiliser avec des technologies d&rsquo;assistance, des appareils mobiles ou un clavier, une version texte est disponible pour <a href="full-circle-home.html?lang=fr" target="_blank" style="color:#cacaca;">lire, imprimer, t&eacute;l&eacute;charger ou conserver</a>.'
-    : 'This is an interactive, HyperCard-inspired story and a playful homage to early digital creation. Because some features may be difficult to navigate with assistive technologies, mobile devices, or keyboards, a text version is available to <a href="full-circle-home.html" target="_blank" style="color:#cacaca;">read, print, download, or keep</a>.';
+    ? 'Il s&rsquo;agit d&rsquo;une histoire interactive inspir&eacute;e de HyperCard et d&rsquo;un hommage ludique &agrave; la cr&eacute;ation num&eacute;rique des origines. Comme certaines fonctionnalit&eacute;s peuvent &ecirc;tre difficiles &agrave; utiliser avec des technologies d&rsquo;assistance, des appareils mobiles ou un clavier, une version texte est disponible pour <a href="text.html?lang=fr" target="_blank" style="color:#cacaca;">lire, imprimer, t&eacute;l&eacute;charger ou conserver</a>.'
+    : 'This is an interactive, HyperCard-inspired story and a playful homage to early digital creation. Because some features may be difficult to navigate with assistive technologies, mobile devices, or keyboards, a text version is available to <a href="text.html" target="_blank" style="color:#cacaca;">read, print, download, or keep</a>.';
   msgSay(l==='fr'?'Interface en français.':'Interface in English.'); }
 function toggleLang(e){ if(e){ e.stopPropagation(); foundEgg('lang'); } setLang(LANG==='fr'?'en':'fr'); }
 function digDecade(e){ if(e){ e.stopPropagation(); } foundEgg('mediaLab'); flipTo(HIDDEN,'iris open'); }
